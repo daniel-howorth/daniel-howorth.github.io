@@ -123,8 +123,6 @@ section.middle {
   padding-right: 40px;
 }
 
-/* fluid title? */
-
 .featured-article-title h1 {
   font-weight: 800;
   font-size: calc(48 / 16 * 1rem);
@@ -216,10 +214,6 @@ section.top-articles {
   text-decoration: none;
 }
 
-.attribution a:hover {
-  color: var(--color-soft-red);
-}
-
 @media (max-width: calc(1000 / 16 * 1rem)) {
   section.middle {
     flex-direction: column;
@@ -264,6 +258,33 @@ section.top-articles {
   section.top-articles {
     min-width: revert;
     flex-direction: column;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .top-article h2:hover {
+    color: var(--color-soft-red);
+    cursor: pointer;
+  }
+
+  li:hover {
+    color: var(--color-soft-red);
+    cursor: pointer;
+  }
+
+  .attribution a:hover {
+    color: var(--color-soft-red);
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: var(--color-very-dark-blue);
+    cursor: pointer;
+  }
+
+  .new-article h2:hover {
+    color: var(--color-soft-orange);
+    cursor: pointer;
   }
 }
 
