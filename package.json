@@ -1,6 +1,6 @@
 {
   "name": "news-homepage",
-  "homepage": "http://daniel-howorth.github.io/news-homepage",
+  "homepage": "http://daniel-howorth.github.io",
   "private": "true",
   "scripts": {
     "build": "webpack",
@@ -17,6 +17,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daniel-howorth/news-homepage.git"
+    "url": "git+https://github.com/daniel-howorth/daniel-howorth.github.io.git"
   }
 }
