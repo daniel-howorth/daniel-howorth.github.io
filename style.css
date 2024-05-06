@@ -106,7 +106,7 @@ nav.mobile-menu ul {
 
 nav.mobile-menu li {
   color: var(--color-very-dark-blue);
-  font-size: 32px;
+  font-size: calc(32 / 16 * 1rem);
 }
 
 section.middle {
