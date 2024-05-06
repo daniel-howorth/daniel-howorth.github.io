@@ -23,6 +23,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: calc(15 / 16 * 1rem);
   font-weight: 400;
+  position: relative;
 }
 
 p,
@@ -40,7 +41,7 @@ img {
   max-width: 100%;
 }
 
-button {
+button#read-more {
   font: inherit;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -52,6 +53,15 @@ button {
   border: none;
   position: absolute;
   bottom: 0;
+}
+
+button.menu {
+  margin-left: auto;
+  padding: 0;
+  align-self: center;
+  background-color: var(--color-off-white);
+  border: none;
+  display: none;
 }
 
 .main-wrapper {
@@ -72,7 +82,7 @@ header {
   margin-bottom: 50px;
 }
 
-nav {
+nav.top-nav {
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -89,10 +99,14 @@ li {
   font-weight: 400;
 }
 
-.menu-icon {
-  margin-left: auto;
-  align-self: center;
-  display: none;
+nav.mobile-menu ul {
+  flex-direction: column;
+  gap: 32px;
+}
+
+nav.mobile-menu li {
+  color: var(--color-very-dark-blue);
+  font-size: 32px;
 }
 
 section.middle {
@@ -169,7 +183,7 @@ section.new-articles .new-article:last-of-type {
 }
 
 .top-articles-container {
-  overflow: scroll;
+  overflow: auto;
 }
 
 section.top-articles {
@@ -227,11 +241,11 @@ section.top-articles {
     gap: 16px;
   }
 
-  nav {
+  nav.top-nav {
     display: none;
   }
 
-  .menu-icon {
+  button.menu {
     display: block;
   }
 }
@@ -277,9 +291,12 @@ section.top-articles {
     cursor: pointer;
   }
 
-  button:hover {
-    background-color: var(--color-very-dark-blue);
+  button {
     cursor: pointer;
+  }
+
+  button#read-more:hover {
+    background-color: var(--color-very-dark-blue);
   }
 
   .new-article h2:hover {
@@ -297,4 +314,45 @@ section.top-articles {
   margin: -1px;
   padding: 0;
   border: 0;
+}
+
+.dialog-container,
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog-container {
+  z-index: 2;
+  display: flex;
+}
+
+.dialog-container[aria-hidden="true"] {
+  display: none;
+}
+
+.dialog-overlay {
+  background-color: rgb(43 46 56 / 0.7);
+}
+
+.dialog-content {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: clamp(300px, 70vw, 500px);
+  max-width: 100%;
+  background-color: var(--color-off-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.close-btn {
+  background-color: var(--color-off-white);
+  border: none;
+  position: absolute;
+  top: 32px;
+  right: 24px;
 }
