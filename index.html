@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <main>
+        <header>
+          <div class="logo">
+            <img src="../assets/images/logo.svg" alt="logo" />
+          </div>
+          <nav class="top-nav">
+            <ul>
+              <li>Home</li>
+              <li>New</li>
+              <li>Popular</li>
+              <li>Trending</li>
+              <li>Categories</li>
+            </ul>
+          </nav>
+          <button
+            class="menu"
+            type="button"
+            data-a11y-dialog-show="mobile-menu-dialog"
+          >
+            <img src="../assets/images/icon-menu.svg" alt="" />
+
+            <div class="visually-hidden">menu</div>
+          </button>
+        </header>
+        <section class="middle">
+          <article class="featured-article">
+            <img
+              src="../assets/images/image-web-3-desktop.jpg"
+              alt=""
+              id="feature-img-desktop"
+            />
+            <img
+              src="../assets/images/image-web-3-mobile.jpg"
+              alt=""
+              id="feature-img-mobile"
+            />
+            <div class="featured-article-content">
+              <div class="featured-article-title">
+                <h1>The Bright Future of Web 3.0?</h1>
+              </div>
+              <div class="featured-article-text">
+                <p>
+                  We dive into the next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <button id="read-more">Read more</button>
+              </div>
+            </div>
+          </article>
+          <section class="new-articles">
+            <h1>New</h1>
+            <div class="new-article">
+              <h2>Hydrogen VS Electric Cars</h2>
+              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </div>
+            <div class="new-article">
+              <h2>The Downsides of AI Artistry</h2>
+              <p>
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </div>
+            <div class="new-article">
+              <h2>Is VC Funding Drying Up?</h2>
+              <p>
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </section>
+        </section>
+        <div class="top-articles-container">
+          <section class="top-articles">
+            <div class="top-article">
+              <div class="article-img">
+                <img src="../assets/images/image-retro-pcs.jpg" alt="" />
+              </div>
+              <div>
+                <h1>01</h1>
+                <h2>Reviving Retro PCs</h2>
+                <p>What happens when old PCs are given modern upgrades?</p>
+              </div>
+            </div>
+            <div class="top-article">
+              <div class="article-img">
+                <img src="../assets/images/image-top-laptops.jpg" alt="" />
+              </div>
+              <div>
+                <h1>02</h1>
+                <h2>Top 10 Laptops of 2022</h2>
+                <p>Our best picks for various needs and budgets.</p>
+              </div>
+            </div>
+            <div class="top-article">
+              <div class="article-img">
+                <img src="../assets/images/image-gaming-growth.jpg" alt="" />
+              </div>
+              <div>
+                <h1>03</h1>
+                <h2>The Growth of Gaming</h2>
+                <p>How the pandemic has sparked fresh opportunities.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/daniel-howorth">Daniel Howorth</a>.
+    </div>
+
+    <div
+      id="mobile-menu-dialog"
+      data-a11y-dialog="mobile-menu-dialog"
+      class="dialog-container"
+      aria-labelledby="mobile-menu-title"
+      aria-hidden="true"
+    >
+      <div class="dialog-overlay" data-a11y-dialog-hide></div>
+      <div class="dialog-content" role="document">
+        <button
+          class="close-btn"
+          type="button"
+          data-a11y-dialog-hide
+          aria-label="Close dialog"
+        >
+          <img src="../assets/images/icon-menu-close.svg" alt="" />
+        </button>
+        <nav class="mobile-menu">
+          <ul>
+            <li>Home</li>
+            <li>New</li>
+            <li>Popular</li>
+            <li>Trending</li>
+            <li>Categories</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
